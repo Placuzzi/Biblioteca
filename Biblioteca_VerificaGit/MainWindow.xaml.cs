@@ -40,5 +40,11 @@ namespace Biblioteca_VerificaGit
             ElencoLibri.Items.Add(Libri.Libri);
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            Biblioteca biblioteca = new Biblioteca ()
+        }
     }
 }

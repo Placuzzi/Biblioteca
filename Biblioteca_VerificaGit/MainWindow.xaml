@@ -7,13 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="Autore" HorizontalAlignment="Left" Margin="10,126,0,0" TextWrapping="Wrap" Text="Scrivi autore" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.487,0.492"/>
-        <TextBox x:Name="Titolo" HorizontalAlignment="Left" Margin="10,149,0,0" TextWrapping="Wrap" Text="Scrivi titolo" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Anno" HorizontalAlignment="Left" Margin="10,172,0,0" TextWrapping="Wrap" Text="scrivi anno" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Editor" HorizontalAlignment="Left" Margin="10,195,0,0" TextWrapping="Wrap" Text="Scrivi Editor" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Num_Pagine" HorizontalAlignment="Left" Margin="10,218,0,0" TextWrapping="Wrap" Text="Scrivi numero di pagine" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="Agg_Libro" Content="Aggiungi Libro" HorizontalAlignment="Left" Margin="179,150,0,0" VerticalAlignment="Top" Height="52" Width="110" Click="Agg_Libro_Click"/>
-        <ListBox x:Name="ElencoLibri" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="437,82,24,164"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="33*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="243*"/>
+            <ColumnDefinition Width="417*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="Autore" HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Scrivi autore" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.487,0.492"/>
+        <TextBox x:Name="Titolo" HorizontalAlignment="Center" Margin="0,63,0,0" TextWrapping="Wrap" Text="Scrivi titolo" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Anno" HorizontalAlignment="Center" Margin="0,86,0,0" TextWrapping="Wrap" Text="scrivi anno" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Editor" HorizontalAlignment="Center" Margin="0,109,0,0" TextWrapping="Wrap" Text="Scrivi Editor" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Num_Pagine" HorizontalAlignment="Center" Margin="0,132,0,0" TextWrapping="Wrap" Text="Scrivi numero di pagine" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="Agg_Libro" Content="Aggiungi Libro" HorizontalAlignment="Left" Margin="44,73,0,0" VerticalAlignment="Top" Height="52" Width="110" Click="Agg_Libro_Click" Grid.Column="1"/>
+        <ListBox x:Name="ElencoLibri" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="68,23,10,37" Grid.Column="2"/>
+        <Button Content="Crea una biblioteca" HorizontalAlignment="Left" Margin="44,53,0,0" VerticalAlignment="Top" Height="69" Width="103" Click="Button_Click" Grid.Column="1" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,47,0,0" TextWrapping="Wrap" Text="Dai un nome" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,70,0,0" TextWrapping="Wrap" Text="Scrivi l'indirizzo" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,93,0,0" TextWrapping="Wrap" Text="Orario di apertura" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,116,0,0" TextWrapping="Wrap" Text="Orario di chiusura " VerticalAlignment="Top" Width="120" Grid.Row="1"/>
 
     </Grid>
 </Window>
