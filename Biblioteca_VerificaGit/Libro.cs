@@ -13,7 +13,10 @@ namespace Biblioteca_VerificaGit
         internal int AnnoPubl { get; set; }
         internal string Editor { get; set; }
         internal int NumPagin { get; set; }
-
+        internal Libro()
+        {
+        
+        }
         public string ReadingTime(int NumPagin)
         {
             string tempoLettura = "";
@@ -30,6 +33,11 @@ namespace Biblioteca_VerificaGit
 
             return tempoLettura;
                
+        }
+        override string ToString() {
+            string Dati;
+            Dati = "Il Titolo del Libro è " + Titolo + ", l'autore è " + Autore + ", è stato pubblicato nell'anno " +AnnoPubl+ " l'editore del libro è " +Editor+ " e le pagine sono " + NumPagin;
+            return Dati;
         }
     }
     
