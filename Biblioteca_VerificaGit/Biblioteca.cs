@@ -14,8 +14,12 @@ namespace Biblioteca_VerificaGit
         string NomeBiblioteca { get; set; }
         string IndirizzoBiblioteca { get; set; }
 
-
-        
-
+        internal Biblioteca(string NomeBiblioteca, string IndirizzoBiblioteca, DateTime OrarioChiusura, DateTime OrarioApertura)
+        {
+            this.NomeBiblioteca = NomeBiblioteca;
+            this.IndirizzoBiblioteca = IndirizzoBiblioteca;
+            this.OrarioChiusura = OrarioChiusura;
+            this.OrarioApertura = OrarioApertura;
+        }
     }
 }
