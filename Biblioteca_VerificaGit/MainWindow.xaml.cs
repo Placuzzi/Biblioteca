@@ -24,5 +24,21 @@ namespace Biblioteca_VerificaGit
         {
             InitializeComponent();
         }
+
+        private void Agg_Libro_Click(object sender, RoutedEventArgs e)
+        {
+            Libro libro = new Libro();
+            Biblioteca Libri = new Biblioteca();
+            libro.Autore = Autore.Text;
+            libro.Titolo = Titolo.Text;
+            libro.Anno = Anno.Text;
+            libro.Editor = Editor.Text;
+            libro.NumPagine = Num_Pagine.Text;
+            Libri.Libri.Add(libro);
+
+            
+            ElencoLibri.Items.Add(Libri.Libri);
+
+        }
     }
 }
